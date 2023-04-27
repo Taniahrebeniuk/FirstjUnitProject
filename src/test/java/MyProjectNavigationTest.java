@@ -10,7 +10,7 @@ public class MyProjectNavigationTest extends BasicTest {
         HomePage homePage = new HomePage(driver);
         homePage.goToLoginPage();
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.successfullLogin("taniahrebeniuk@gmail.com", "grebeniuk1993");
+        loginPage.successfullLogin("taniahrebeniuk@gmail.com", "taniahrebeniuk@gmail.com");
         MyProjectPage myProjectPage = new MyProjectPage(driver);
         myProjectPage.goToMyProjectPage();
     }
