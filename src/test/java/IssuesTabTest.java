@@ -15,7 +15,7 @@ public class IssuesTabTest extends BasicTest {
         IssuesPage issuesPage = new IssuesPage(driver);
         issuesPage.goToIssueTab();
         issuesPage.clickOnNewIssueButton();
-        assertTrue(issuesPage.isNewIssueFormDisplayed());
+        Assertions.assertTrue(issuesPage.isNewIssueFormDisplayed());
         issuesPage.enterTitleAndComment("Some title", "Some comment");
         issuesPage.submitNewIssue();
         issuesPage.isIssueWithTitleDisplayed("Some title");
