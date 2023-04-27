@@ -1,10 +1,15 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositoriesTest extends BaseTest {
+public class RepositoriesTest extends BasicPage {
+    public RepositoriesTest(WebDriver driver) {
+        super(driver);
+    }
+
     @Test
     public void validateRepositories() {
         HomePage homePage = new HomePage(driver);

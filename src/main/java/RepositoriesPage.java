@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RepositoriesPage extends BasePage {
+public class RepositoriesPage extends BasicPage {
     private List<WebElement> repositories = driver.findElements(By.xpath("//a[@itemprop='name codeRepository']"));
 
 
