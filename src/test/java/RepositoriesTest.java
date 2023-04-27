@@ -16,7 +16,7 @@ public class RepositoriesTest extends BasicPage {
         homePage.goToLoginPage();
         LoginPage loginPage = new LoginPage(driver);
         Assertions.assertTrue(loginPage.getLogo().isDisplayed());
-        loginPage.successfullLogin("test9874@ukr.net", "test9874@ukr.net");
+        loginPage.successfullLogin("taniahrebeniuk@gmail.com", "taniahrebeniuk@gmail.com");
         //...
         List<String> expectedRepositoriedList = new ArrayList<>();
         expectedRepositoriedList.add("test2");
