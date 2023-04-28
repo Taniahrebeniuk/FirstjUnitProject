@@ -1,3 +1,4 @@
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -5,10 +6,9 @@ import org.openqa.selenium.WebDriver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositoriesTest extends BasicPage {
-    public RepositoriesTest(WebDriver driver) {
-        super(driver);
-    }
+public class RepositoriesTest extends BasicTest {
+
+    protected Logger logger;
 
     @Test
     public void validateRepositories() {
@@ -25,7 +25,6 @@ public class RepositoriesTest extends BasicPage {
 
         RepositoriesPage repositoriesPage = new RepositoriesPage(driver);
         Assertions.assertEquals(expectedRepositoriedList, repositoriesPage.getRepositories());
-
     }
 
 }

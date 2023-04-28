@@ -1,3 +1,5 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BasicTest {
     protected WebDriver driver;
+    protected Logger logger;
 
     @BeforeEach
     public void setUp() {
@@ -15,6 +18,8 @@ public class BasicTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
+        Logger logger = LogManager.getLogger();
+        logger.info("Chrome driver object creation is starting");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://github.com/");

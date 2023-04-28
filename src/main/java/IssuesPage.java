@@ -8,11 +8,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class IssuesPage extends BasicPage {
+    private final static String TITLE = "IssuesPage";
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3)); // wait for up to 3 seconds
 
     public IssuesPage(WebDriver driver) {
-        super(driver);
+        super(driver, TITLE);
     }
+
 
     public IssuesPage goToIssueTab() {
         WebElement issuesTabElement = new WebDriverWait(driver, Duration.ofSeconds(3))
