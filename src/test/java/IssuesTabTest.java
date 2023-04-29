@@ -1,6 +1,5 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class IssuesTabTest extends BasicTest {
 
@@ -15,7 +14,7 @@ public class IssuesTabTest extends BasicTest {
         IssuesPage issuesPage = new IssuesPage(driver);
         issuesPage.goToIssueTab();
         issuesPage.clickOnNewIssueButton();
-        Assertions.assertTrue(issuesPage.isNewIssueFormDisplayed());
+        Assert.assertTrue(issuesPage.isNewIssueFormDisplayed());
         issuesPage.enterTitleAndComment("Some title", "Some comment");
         issuesPage.submitNewIssue();
         issuesPage.isIssueWithTitleDisplayed("Some title");

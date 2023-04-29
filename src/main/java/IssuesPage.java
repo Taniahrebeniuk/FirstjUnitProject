@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class IssuesPage extends BasicPage {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3)); // wait for up to 3 seconds
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 
     public IssuesPage(WebDriver driver) {
         super(driver);

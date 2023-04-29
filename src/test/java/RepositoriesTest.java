@@ -1,6 +1,6 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class RepositoriesTest extends BasicPage {
         HomePage homePage = new HomePage(driver);
         homePage.goToLoginPage();
         LoginPage loginPage = new LoginPage(driver);
-        Assertions.assertTrue(loginPage.getLogo().isDisplayed());
+        Assert.assertTrue(loginPage.getLogo().isDisplayed());
         loginPage.successfullLogin("taniahrebeniuk@gmail.com", "taniahrebeniuk@gmail.com");
         //...
         List<String> expectedRepositoriedList = new ArrayList<>();
@@ -24,7 +24,7 @@ public class RepositoriesTest extends BasicPage {
         expectedRepositoriedList.add("test");
 
         RepositoriesPage repositoriesPage = new RepositoriesPage(driver);
-        Assertions.assertEquals(expectedRepositoriedList, repositoriesPage.getRepositories());
+        Assert.assertEquals(expectedRepositoriedList, repositoriesPage.getRepositories());
 
     }
 

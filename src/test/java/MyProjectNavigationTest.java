@@ -1,7 +1,7 @@
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.jupiter.api.Assertions;
+import org.testng.annotations.Test;
+
 
 public class MyProjectNavigationTest extends BasicTest {
 
